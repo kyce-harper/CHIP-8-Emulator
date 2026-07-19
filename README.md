@@ -1,12 +1,12 @@
-# CHIP-8 Emulator — Learning Project
+# CHIP-8 Emulator: Learning Project
 
 Build your own CHIP-8 emulator in C++ by following along with the
 [codeslinger CHIP-8 tutorial](http://www.codeslinger.co.uk/pages/projects/chip8.html).
 
-This repo is a **pre-built environment + lesson plan**. The source files are
-mostly empty skeletons full of `TODO` markers — *you* write the emulator code,
-one lesson at a time. Each lesson tells you exactly what to read, what to write,
-and how to check it works.
+This repo is a pre-built environment plus a lesson plan. The source files are
+mostly empty skeletons full of `TODO` markers, and you write the emulator code
+yourself, one lesson at a time. Each lesson tells you what to read, what to write,
+and how to check that it works.
 
 ## How to use this repo
 
