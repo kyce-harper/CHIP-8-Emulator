@@ -1,0 +1,6 @@
+build/
+.DS_Store
+roms/*.ch8
+roms/*.rom
+lessons/
+.claude/

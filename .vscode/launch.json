@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug chip8",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/chip8",
+            "args": ["roms/test_opcode.ch8"],
+            "cwd": "${workspaceFolder}",
+            "MIMode": "lldb",
+            "preLaunchTask": "Build"
+        }
+    ]
+}
