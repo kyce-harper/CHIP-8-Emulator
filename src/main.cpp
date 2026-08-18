@@ -20,7 +20,19 @@ int main(int argc, char* argv[])
     }
 
     std::printf("Toolchain OK — SDL2 initialised.\n");
-    std::printf("Start with lessons/00-setup.md\n");
+
+    // TEMPORARY (Lesson 01 checkpoint) — construct a Chip8 on the stack,
+    // reset it, and load a ROM to prove the memory map is correct.
+    // This block gets replaced by the real fetch/decode loop in Lesson 02.
+    Chip8 chip8;
+    chip8.CPUReset();
+    chip8.LoadRom("roms/2-ibm-logo.ch8");
+    chip8.ExecuteNextOpcode();
+    chip8.ExecuteNextOpcode();
+    chip8.ExecuteNextOpcode();
+    chip8.ExecuteNextOpcode();
+    chip8.ExecuteNextOpcode();
+    chip8.ExecuteNextOpcode();
 
     // TODO (Lesson 04): create the window + renderer here
 

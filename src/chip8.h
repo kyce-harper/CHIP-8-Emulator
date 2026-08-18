@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 
 // ============================================================
 //  The Chip8 class — the "console" you are emulating.
@@ -14,10 +15,11 @@ typedef unsigned short WORD;   // 16 bits (0-65535)
 class Chip8
 {
 public:
-    // TODO (Lesson 01): declare CPUReset() and a bool LoadRom(const char* path)
+    void CPUReset();
+    bool LoadRom(const char* path);
 
-    // TODO (Lesson 02): declare WORD GetNextOpcode() and
-    //                   void ExecuteNextOpcode()
+   WORD GetNextOpcode();
+   void ExecuteNextOpcode();
 
     // TODO (Lesson 04): the display code in main.cpp will need to read the
     //                   screen array — make it public or add a getter.
@@ -27,12 +29,19 @@ public:
 private:
     // TODO (Lesson 01): declare the hardware state here:
     //   - game memory       (0xFFF bytes)
+    BYTE m_GameMemory[0xFFF];
     //   - 16 data registers (V0-VF)
+    BYTE m_Registers[16];
     //   - address register I
+    WORD m_AddressI;
     //   - program counter
+    WORD m_ProgramCounter;
     //   - the stack         (hint: std::vector<WORD>)
+    std::vector<WORD> m_Stack;
     //   - screen data       (64 x 32)
+    BYTE m_ScreenData[64][32];
 
+    void Opcode1NNN(WORD opcode);
     // TODO (Lesson 03): declare one member function per opcode,
     //   e.g. void Opcode1NNN(WORD opcode);  — add them as you implement them.
 
